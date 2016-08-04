@@ -113,7 +113,12 @@ namespace MacOSStringResourceValidator
 
         private void aboutBtn_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Validator for .strings files(iOS string resource file), running on Windows, .NET 4.5\r\nVisite it on github now?", "About", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            var result = MessageBox.Show(version + Environment.NewLine 
+                    + "Validator for .strings files(iOS string resource file), running on Windows, .NET 4.5" + Environment.NewLine 
+                    + "Visite it on github now?", 
+                "About", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Information);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 ProcessStartInfo info = new ProcessStartInfo();
