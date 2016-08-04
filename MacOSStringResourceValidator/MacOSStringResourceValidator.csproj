@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>check_orangered_2hr_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +55,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringsFile.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -70,6 +78,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Scripts\Rubustrings-master\.travis.yml" />
+    <Content Include="check_orangered.png" />
+    <Content Include="check_orangered_2hr_icon.ico" />
+    <Content Include="Scripts\Rubustrings-master\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Rubustrings-master\rubustrings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scripts\Rubustrings-master\swift\rubustrings.rb" />
+    <None Include="Scripts\Rubustrings-master\swift\rubustrings.swift" />
+    <None Include="Scripts\Rubustrings-master\tests\suites\Localizable_with_no_strings.in" />
+    <None Include="Scripts\Rubustrings-master\tests\suites\Localizable_with_no_strings.out" />
+    <None Include="Scripts\Rubustrings-master\tests\tests.bats" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
