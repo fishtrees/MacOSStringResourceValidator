@@ -9,7 +9,7 @@ Currently only tow rules:
 
 ## Binary releases
 
-* v1.0-pre https://github.com/fishtrees/MacOSStringResourceValidator_Binary/releases/tag/v1.0-pre
+* https://github.com/fishtrees/MacOSStringResourceValidator_Binary/releases
 
 ## TODO
 
