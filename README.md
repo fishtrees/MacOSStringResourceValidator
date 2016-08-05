@@ -1,6 +1,11 @@
 #MacOSStringResourceValidator
 
-Validator for .strings files(iOS string resource file), running on Windows, .NET 4.5
+Validator for .strings files(iOS string resource file), running on Windows with GUI, .NET 4.5. 
+
+##Rules
+Currently only tow rules
+* validation of syntaxis, `"key" = "value";`
+* validation of text encoding, e.g. if .strings file encoded with ASCII, but contains some chars that doesn't belong to ASCII, validator will give an error. so, **Recommended encoding is UTF-8**.
 
 ## Binary releases
 
@@ -9,3 +14,9 @@ Validator for .strings files(iOS string resource file), running on Windows, .NET
 ## TODO
 
 * i18n
+
+## THANKS
+* @dcordero https://github.com/dcordero/Rubustrings
+
+## License
+GNU GENERAL PUBLIC LICENSE Version 3
