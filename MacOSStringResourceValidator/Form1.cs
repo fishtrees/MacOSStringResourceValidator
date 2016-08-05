@@ -32,7 +32,7 @@ namespace MacOSStringResourceValidator
             }
             else if (e.Cancelled)
             {
-                MessageBox.Show(e.Error.Message, "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Validation be cancelled.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else if (null != e.Result && !String.IsNullOrEmpty(e.Result.ToString()))
             {
@@ -41,7 +41,7 @@ namespace MacOSStringResourceValidator
             else
             {
                 this.resultTextBox.Text = String.Empty;
-                MessageBox.Show("验证通过", "Passed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Validation passed!", "Passed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

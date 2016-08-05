@@ -45,40 +45,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 17);
+            this.label1.Location = new System.Drawing.Point(15, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = ".strings文件";
+            this.label1.Text = ".strings file:";
             // 
             // filePathTextBox
             // 
             this.filePathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.filePathTextBox.Location = new System.Drawing.Point(96, 14);
+            this.filePathTextBox.Location = new System.Drawing.Point(94, 22);
+            this.filePathTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.filePathTextBox.Name = "filePathTextBox";
-            this.filePathTextBox.Size = new System.Drawing.Size(514, 21);
+            this.filePathTextBox.Size = new System.Drawing.Size(712, 23);
             this.filePathTextBox.TabIndex = 1;
             // 
             // validationBtn
             // 
             this.validationBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.validationBtn.Location = new System.Drawing.Point(697, 12);
+            this.validationBtn.Location = new System.Drawing.Point(906, 17);
+            this.validationBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.validationBtn.Name = "validationBtn";
-            this.validationBtn.Size = new System.Drawing.Size(75, 23);
+            this.validationBtn.Size = new System.Drawing.Size(87, 33);
             this.validationBtn.TabIndex = 2;
-            this.validationBtn.Text = "验证";
+            this.validationBtn.Text = "Validate";
             this.validationBtn.UseVisualStyleBackColor = true;
             this.validationBtn.Click += new System.EventHandler(this.validationBtn_Click);
             // 
             // browseBtn
             // 
             this.browseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.browseBtn.Location = new System.Drawing.Point(616, 12);
+            this.browseBtn.Location = new System.Drawing.Point(812, 17);
+            this.browseBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.browseBtn.Name = "browseBtn";
-            this.browseBtn.Size = new System.Drawing.Size(75, 23);
+            this.browseBtn.Size = new System.Drawing.Size(87, 33);
             this.browseBtn.TabIndex = 3;
-            this.browseBtn.Text = "浏览";
+            this.browseBtn.Text = "Browse";
             this.browseBtn.UseVisualStyleBackColor = true;
             this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
             // 
@@ -88,12 +91,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.resultTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(15, 72);
+            this.groupBox1.Location = new System.Drawing.Point(17, 102);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 477);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(976, 614);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "结果";
+            this.groupBox1.Text = "Result";
             // 
             // resultTextBox
             // 
@@ -101,11 +106,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resultTextBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultTextBox.Location = new System.Drawing.Point(6, 20);
+            this.resultTextBox.Location = new System.Drawing.Point(7, 28);
+            this.resultTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.resultTextBox.Multiline = true;
             this.resultTextBox.Name = "resultTextBox";
             this.resultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.resultTextBox.Size = new System.Drawing.Size(745, 451);
+            this.resultTextBox.Size = new System.Drawing.Size(961, 575);
             this.resultTextBox.TabIndex = 0;
             // 
             // openFileDialog1
@@ -116,10 +122,11 @@
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(15, 43);
+            this.progressBar1.Location = new System.Drawing.Point(12, 59);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.progressBar1.MarqueeAnimationSpeed = 10;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(676, 23);
+            this.progressBar1.Size = new System.Drawing.Size(887, 33);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 5;
             this.progressBar1.Value = 50;
@@ -128,19 +135,20 @@
             // aboutBtn
             // 
             this.aboutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.aboutBtn.Location = new System.Drawing.Point(698, 42);
+            this.aboutBtn.Location = new System.Drawing.Point(907, 59);
+            this.aboutBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.aboutBtn.Name = "aboutBtn";
-            this.aboutBtn.Size = new System.Drawing.Size(75, 23);
+            this.aboutBtn.Size = new System.Drawing.Size(87, 33);
             this.aboutBtn.TabIndex = 6;
-            this.aboutBtn.Text = "关于";
+            this.aboutBtn.Text = "About";
             this.aboutBtn.UseVisualStyleBackColor = true;
             this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.aboutBtn);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
@@ -148,9 +156,11 @@
             this.Controls.Add(this.validationBtn);
             this.Controls.Add(this.filePathTextBox);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
-            this.Text = ".strings文件验证";
+            this.Text = ".strings validator";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
