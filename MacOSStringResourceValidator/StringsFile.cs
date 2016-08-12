@@ -59,13 +59,15 @@ namespace MacOSStringResourceValidator
         {
             var encoding = GetFileEncoding(this.filePath);
             var bytes = File.ReadAllBytes(this.filePath);
-            if (false == IsStringValidForCodePage(bytes, encoding.CodePage))
+            try
             {
-                this.validationMessages.AppendLine("Error, file encoding is " + encoding.EncodingName + ", but some chars can not be parsed.");
-                if (IsUnicodeEncoding(encoding))
-                {
-                    this.validationMessages.AppendLine("Recommended encoding is unicode, e.g. UTF8.");
-                }
+                TryDecodeStringWithCodePage(bytes, encoding.CodePage);
+            }
+            catch(DecoderFallbackException e)
+            {
+                this.validationMessages.AppendLine("Error, file loaded with " + encoding.EncodingName + ", but some chars can not be parsed, details below:");
+                this.validationMessages.AppendLine("\t" + e.Message);
+                this.validationMessages.AppendLine("\tRecommended encoding is UTF8.");
                 return null;
             }
             return encoding;
@@ -97,26 +99,24 @@ namespace MacOSStringResourceValidator
 
         private static Encoding GetFileEncoding(string filePath)
         {
-            using (StreamReader reader = new StreamReader(filePath, Encoding.ASCII, true))
+            using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8, true))
             {
                 reader.Peek(); // you need this!
                 return reader.CurrentEncoding;
             }
         }
 
-        public static bool IsStringValidForCodePage(byte[] data, int codePage)
+        /// <summary>
+        /// 用指定的编码方式解码原始字节数据，如果遇到无法解码的数据，则抛出DecoderFallbackException异常。
+        /// </summary>
+        /// <param name="data">待检测的字节数据</param>
+        /// <param name="codePage">文本编码方式代码</param>
+        /// <exception cref="DecoderFallbackException"></exception>
+        /// <returns></returns>
+        private static string TryDecodeStringWithCodePage(byte[] data, int codePage)
         {
             var encoder = Encoding.GetEncoding(codePage, new EncoderExceptionFallback(), new DecoderExceptionFallback());
-            try
-            {
-                encoder.GetString(data);
-            }
-            catch (DecoderFallbackException)
-            {
-                return false;
-            }
-
-            return true;
+            return encoder.GetString(data);
         }
     }
 }
