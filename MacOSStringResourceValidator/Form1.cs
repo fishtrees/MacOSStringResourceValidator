@@ -96,6 +96,7 @@ namespace MacOSStringResourceValidator
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 this.filePathTextBox.Text = this.openFileDialog1.FileName;
+                validationBtn_Click(this, null);
             }
 
         }
@@ -127,6 +128,25 @@ namespace MacOSStringResourceValidator
 
                 Process.Start(info);
             }
+        }
+
+        private void Form1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Link;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            string filePath = ((System.Array)e.Data.GetData(DataFormats.FileDrop)).GetValue(0).ToString();
+            this.filePathTextBox.Text = filePath;
+            validationBtn_Click(this, null);
         }
 
     }
