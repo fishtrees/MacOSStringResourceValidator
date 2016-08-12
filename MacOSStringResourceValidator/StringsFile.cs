@@ -94,7 +94,8 @@ namespace MacOSStringResourceValidator
 
         private string RemoveUselessContent(string content)
         {
-            return Regex.Replace(content, "\\/\\*.*?\\*\\/|\\/\\/.*?$", String.Empty, RegexOptions.Multiline);
+            string temp = Regex.Replace(content, "\\/\\*.*?\\*\\/", String.Empty, RegexOptions.Singleline);
+            return Regex.Replace(temp, "\\/\\/.*?$", String.Empty, RegexOptions.Multiline);
         }
 
         private static Encoding GetFileEncoding(string filePath)
